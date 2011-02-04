@@ -1,0 +1,43 @@
+/*
+Theme Name: TwentyTen/Five
+Theme URI: http://richardshepherd.com
+Description: A HTML5 version of the 2010 default theme for WordPress.
+Author: Richard Shepherd
+Version: 0.1
+Template: twentyten
+
+*/
+
+/* This is a child theme, so grab the parent */
+@import url(../twentyten/style.css); 
+
+/* A message for users with JavaScript turned off */
+noscript strong {display: block; font-size: 18px; line-height:1.5em; padding: 5px 0; background-color: #ccc; color: #a00; text-align: center; }
+
+/* HTML5 elements need display: block */
+header,nav,section,article,aside,figure,footer { display:block; }
+
+/* Where we're reassigning div's to HTML5 elements we */
+/* need to copy across their CSS styles like so... */
+header { padding:30px 0 0; }
+footer { margin-bottom:20px; clear:both; width:100%; }
+
+#content figure { background:#f1f1f1; line-height:18px; margin-bottom:20px; padding:4px; text-align:center; }
+#content figure img { margin:5px 5px 0; }
+#content figure figcaption { color:#888; font-size:12px; margin:5px; font-family:"Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
+
+nav { font-family:"Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; margin:0 auto; width:940px; background:#000; display:block; float:left; margin:0 auto; width:940px; -webkit-text-size-adjust:120%; }
+nav .menu-header { font-size:13px; margin-left:12px; width:928px; }
+nav .menu-header ul { list-style:none; margin:0; }
+nav .menu-header li { float:left; position:relative; }
+nav a:visited,nav a:link { color:#aaa; display:block; line-height:38px; padding:0 10px; text-decoration:none; }
+nav ul ul { box-shadow:0 3px 3px rgba(0,0,0,0.2); -moz-box-shadow:0 3px 3px rgba(0,0,0,0.2); -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2); display:none; position:absolute; top:38px; left:0; float:left; width:180px; z-index:99999; }
+nav ul ul li { min-width:180px; }
+nav ul ul ul { left:100%; top:0; }
+nav ul ul a { background:#333; line-height:1em; padding:10px; width:160px; height:auto; }
+nav li:hover > a,nav ul ul :hover > a { background:#333; color:#fff; }
+nav ul li:hover > ul { display:block; }
+nav ul li.current_page_item > a,nav ul li.current-menu-ancestor > a,nav ul li.current-menu-item > a,nav ul li.current-menu-parent > a { color:#fff; }
+
+
+.ie6 nav ul li.current_page_item a,.ie6 nav ul li.current-menu-ancestor a,.ie6 nav ul li.current-menu-item a,.ie6 nav ul li.current-menu-parent a,.ie6 nav ul li a:hover { color:#fff; }
