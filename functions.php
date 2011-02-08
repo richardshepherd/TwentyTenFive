@@ -3,29 +3,17 @@
 add_shortcode('wp_caption', 'twentyten_img_caption_shortcode');
 add_shortcode('caption', 'twentyten_img_caption_shortcode');
 
+
 /**
- * The TwentyTen Caption shortcode.
+ * The TwentyTen Five Caption shortcode.
  * added by Richard Shepherd to include HTML5 goodness
- *
- * Allows a plugin to replace the content that would otherwise be returned. The
- * filter is 'img_caption_shortcode' and passes an empty string, the attr
- * parameter and the content parameter values.
  *
  * The supported attributes for the shortcode are 'id', 'align', 'width', and
  * 'caption'.
  *
- * @since 3.0.4
- *
- * @param array $attr Attributes attributed to the shortcode.
- * @param string $content Optional. Shortcode content.
- * @return string
+ * @since TwentyTen Five 1.0
  */
 function twentyten_img_caption_shortcode($attr, $content = null) {
-
-	// Allow plugins/themes to override the default caption template.
-	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
-	if ( $output != '' )
-		return $output;
 
 	extract(shortcode_atts(array(
 		'id'	=> '',
@@ -47,14 +35,13 @@ function twentyten_img_caption_shortcode($attr, $content = null) {
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  *
- * @since Twenty Ten 1.0
+ * @since TwentyTen Five 1.0
  */
 function twentyten_posted_on() {
-		printf( __( '<span>Posted on</span> %2$s <span>by</span> %3$s', 'twentyten' ),
+		printf( __( 'Posted on %2$s by %3$s', 'twentyten' ),
 			'meta-prep meta-prep-author',
-			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s" pubdate>%4$s</time></a>',
+			sprintf( '<a href="%1$s" rel="bookmark"><time datetime="%2$s" pubdate>%3$s</time></a>',
 			get_permalink(),
-			esc_attr( get_the_time('H:i') ),
 			get_the_date('c'),
 			get_the_date()
 		),

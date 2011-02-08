@@ -22,6 +22,8 @@ header,nav,section,article,aside,figure,footer { display:block; }
 header { padding:30px 0 0; }
 footer { margin-bottom:20px; clear:both; width:100%; }
 
+h2#site-description { font-size: 12px;}
+
 #content figure { background:#f1f1f1; line-height:18px; margin-bottom:20px; padding:4px; text-align:center; }
 #content figure img { margin:5px 5px 0; }
 #content figure figcaption { color:#888; font-size:12px; margin:5px; font-family:"Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
