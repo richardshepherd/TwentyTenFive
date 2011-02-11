@@ -11,7 +11,7 @@ add_shortcode('caption', 'twentyten_img_caption_shortcode');
  * The supported attributes for the shortcode are 'id', 'align', 'width', and
  * 'caption'.
  *
- * @since TwentyTen Five 1.0
+ * @since TwentyTen Five 0.1
  */
 function twentyten_img_caption_shortcode($attr, $content = null) {
 
@@ -35,7 +35,7 @@ function twentyten_img_caption_shortcode($attr, $content = null) {
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  *
- * @since TwentyTen Five 1.0
+ * @since TwentyTen Five 0.1
  */
 function twentyten_posted_on() {
 		printf( __( 'Posted on %2$s by %3$s', 'twentyten' ),
@@ -52,5 +52,36 @@ function twentyten_posted_on() {
 		)
 	);
 }
+
+
+
+/**
+ * Customise the TwentyTen Five comments fields with HTML5 form elements
+ *
+ *	Adds support for 	placeholder
+ *						required
+ *						type="email"
+ *						type="website"
+ *
+ * @since TwentyTen Five 1.0
+ */
+function twentytenfive_comments() {
+
+	$fields =  array(
+		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+		            
+		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+		            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+		            
+		'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+		            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+	);
+	return $fields;
+}
+
+
+add_filter('comment_form_default_fields', 'twentytenfive_comments');
+
 
 
