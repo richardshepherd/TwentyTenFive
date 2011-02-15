@@ -42,4 +42,8 @@ nav ul li:hover > ul { display:block; }
 nav ul li.current_page_item > a,nav ul li.current-menu-ancestor > a,nav ul li.current-menu-item > a,nav ul li.current-menu-parent > a { color:#fff; }
 
 
+input[type="email"], 
+input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); padding: 2px; }
+
+
 .ie6 nav ul li.current_page_item a,.ie6 nav ul li.current-menu-ancestor a,.ie6 nav ul li.current-menu-item a,.ie6 nav ul li.current-menu-parent a,.ie6 nav ul li a:hover { color:#fff; }
