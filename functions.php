@@ -11,7 +11,7 @@ add_shortcode('caption', 'twentyten_img_caption_shortcode');
  * The supported attributes for the shortcode are 'id', 'align', 'width', and
  * 'caption'.
  *
- * @since TwentyTen Five 0.1
+ * @since Twenty Ten Five 1.0
  */
 function twentyten_img_caption_shortcode($attr, $content = null) {
 
@@ -35,7 +35,7 @@ function twentyten_img_caption_shortcode($attr, $content = null) {
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  *
- * @since TwentyTen Five 0.1
+ * @since Twenty Ten Five 1.0
  */
 function twentyten_posted_on() {
 		printf( __( 'Posted on %2$s by %3$s', 'twentyten' ),
@@ -63,7 +63,7 @@ function twentyten_posted_on() {
  *						type="email"
  *						type="url"
  *
- * @since TwentyTen Five 1.0
+ * @since Twenty Ten Five 1.0
  */
 function twentytenfive_comments() {
 

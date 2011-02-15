@@ -8,8 +8,8 @@
  * from a dropdown menu on the edit page screen.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage Twenty_Ten_Five 
+ * @since Twenty Ten Five 1.0
  */
 
 get_header(); ?>

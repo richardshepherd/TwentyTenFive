@@ -8,8 +8,8 @@
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage Twenty_Ten_Five 
+ * @since Twenty Ten Five 1.0
  */
 ?>
 
@@ -37,10 +37,10 @@
 			?></h3>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<div class="navigation">
+			<nav class="navigation">
 				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'twentyten' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-			</div> <!-- .navigation -->
+			</nav> <!-- .navigation -->
 <?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">

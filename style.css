@@ -1,15 +1,15 @@
 /*
-Theme Name: TwentyTen/Five
+Theme Name: TwentyTen Five
 Theme URI: http://richardshepherd.com
-Description: A HTML5 version of the 2010 default theme for WordPress.
+Description: A HTML5 version of the TwentyTen default theme for WordPress.
 Author: Richard Shepherd
-Version: 0.1
-Template: twentyten
-
+Version: 1.0
+Tags: html5, black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style
 */
 
-/* This is a child theme, so grab the parent */
-@import url(../twentyten/style.css); 
+/* Grab the original TwentyTen styles */
+/* This stylesheet merely overrides a few and brings HTML5 to the masses! */
+@import url(css/twentyten-style.css); 
 
 /* A message for users with JavaScript turned off */
 noscript strong {display: block; font-size: 18px; line-height:1.5em; padding: 5px 0; background-color: #ccc; color: #a00; text-align: center; }
@@ -28,7 +28,7 @@ h2#site-description { font-size: 12px;}
 #content figure img { margin:5px 5px 0; }
 #content figure figcaption { color:#888; font-size:12px; margin:5px; font-family:"Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
 
-nav { font-family:"Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; margin:0 auto; width:940px; background:#000; display:block; float:left; margin:0 auto; width:940px; -webkit-text-size-adjust:120%; }
+nav#access { font-family:"Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; margin:0 auto; width:940px; background:#000; display:block; float:left; margin:0 auto; width:940px; -webkit-text-size-adjust:120%; }
 nav .menu-header { font-size:13px; margin-left:12px; width:928px; }
 nav .menu-header ul { list-style:none; margin:0; }
 nav .menu-header li { float:left; position:relative; }

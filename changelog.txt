@@ -1,0 +1,37 @@
+*** TwentyTen Five Changelog ***
+
+Last edited on 2011.02.15 by Richard Shepherd
+
+2011.02.15 - version 1.0.0
+--------------------------
+	* First release! Whoop!
+	* comments.php			- changed navigation div to nav
+	* footer.php			- changed footer div to footer
+	* functions.php			- added custom image caption shortcode function, now uses figure and figcaption
+							- created posted_on function to use date element
+							- included functions to create HTML5 comment form
+	* header.php			- added link to modernizr script
+							- added modernizr 'no-js' class to html element
+							- added header element
+							- changed masthead div to a section
+							- added hgroup and introduced h2 element
+							- changed navigation div to a nav
+	* /js/					- added js folder and modernizr-1.6.min.js
+	* loop.php				- changed post divs to articles, 4 instances
+	 						- changed 'nav above' and 'nav below' divs to navs
+	* onecolumn-page.php	- changed post div to article
+	* page.php				- changed post div to article
+	* search.php			- changed post div to article
+	* sidebar-footer.php	- footer widget area is now a section, widgets are now asides
+	* single.php			- changed post div to article
+	 						- changed 'nav above' and 'nav below' divs to navs
+	* style.css				- added in relevant styles, uses twentyten as parent theme 
+	* added the TwentyTen Five screenshot.png
+	* merged in the rest of twentyten so this is no longer a child theme
+	
+To-Do
+-----
+
+	* Add <time> element to attachment.php. Check for other instances.
+	* Go through each template checking for articles
+	* Introduce asides to all widgets
