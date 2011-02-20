@@ -28,10 +28,3 @@ Last edited on 2011.02.15 by Richard Shepherd
 	* style.css				- added in relevant styles, uses twentyten as parent theme 
 	* added the TwentyTen Five screenshot.png
 	* merged in the rest of twentyten so this is no longer a child theme
-	
-To-Do
------
-
-	* Add <time> element to attachment.php. Check for other instances.
-	* Go through each template checking for articles
-	* Introduce asides to all widgets
