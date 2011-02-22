@@ -1,6 +1,6 @@
 *** TwentyTen Five Changelog ***
 
-Last edited on 2011.02.15 by Richard Shepherd
+Last edited on 2011.02.22 by Richard Shepherd
 
 2011.02.15 - version 1.0.0
 --------------------------
