@@ -25,12 +25,14 @@ function twentyten_img_caption_shortcode($attr, $content = null) {
 	if ( 1 > (int) $width || empty($caption) )
 		return $content;
 
-	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
 
-	return '<figure ' . $id . 'class="' . esc_attr($align) . '" style="width: ' . (10 + (int) $width) . 'px">'
-	. do_shortcode( $content ) . '<figcaption>' . $caption . '</figcaption></figure>';
+if ( $id ) $idtag = 'id="' . esc_attr($id) . '" ';
 
+  return '<figure ' . $idtag . 'aria-describedby="figcaption_' . $id . '" style="width: ' . (10 + (int) $width) . 'px">' 
+  . do_shortcode( $content ) . '<figcaption id="figcaption_' . $id . '">' . $caption . '</figcaption></figure>';
 }
+
+
 
 /**
  * Prints HTML with meta information for the current post—date/time and author.
