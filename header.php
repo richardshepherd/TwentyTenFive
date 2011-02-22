@@ -55,7 +55,7 @@
 
 <body <?php body_class(); ?>>
 
-<noscript><strong>Sorry, but you need to turn JavaScript on to use this site. <a href="http://turnjavascripton.com" target="_blank">Find out how...</a></strong></noscript>
+<noscript><strong>JavaScript is required for this website to be displayed correctly. Please enable JavaScript before continuing...</strong></noscript>
 
 <div id="wrapper" class="hfeed">
 	<header>
