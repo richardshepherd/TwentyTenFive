@@ -8,7 +8,7 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Twenty_Ten_Five 
+ * @subpackage Twenty_Ten_Five
  * @since Twenty Ten Five 1.0
  */
 
@@ -20,11 +20,13 @@ get_header(); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if ( is_front_page() ) { ?>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-					<?php } else { ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php } ?>
+					<header>
+						<?php if ( is_front_page() ) { ?>
+							<h2 class="entry-title"><?php the_title(); ?></h2>
+						<?php } else { ?>
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+						<?php } ?>
+					</header>
 
 					<div class="entry-content">
 						<?php the_content(); ?>

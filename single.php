@@ -20,11 +20,13 @@ get_header(); ?>
 				</nav><!-- #nav-above -->
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<header>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
 
-					<div class="entry-meta">
-						<?php twentyten_posted_on(); ?>
-					</div><!-- .entry-meta -->
+						<p class="entry-meta">
+							<?php twentyten_posted_on(); ?>
+						</p><!-- .entry-meta -->
+					</header>
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -32,7 +34,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 <?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>
-					<div id="entry-author-info">
+					<footer id="entry-author-info">
 						<div id="author-avatar">
 							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyten_author_bio_avatar_size', 60 ) ); ?>
 						</div><!-- #author-avatar -->
@@ -45,13 +47,13 @@ get_header(); ?>
 								</a>
 							</div><!-- #author-link	-->
 						</div><!-- #author-description -->
-					</div><!-- #entry-author-info -->
+					</footer><!-- #entry-author-info -->
 <?php endif; ?>
 
-					<div class="entry-utility">
+					<footer class="entry-utility">
 						<?php twentyten_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
-					</div><!-- .entry-utility -->
+					</footer><!-- .entry-utility -->
 				</article><!-- #post-## -->
 
 				<nav id="nav-below" class="navigation">

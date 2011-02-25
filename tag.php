@@ -11,10 +11,11 @@ get_header(); ?>
 
 		<div id="container">
 			<div id="content" role="main">
-
-				<h1 class="page-title"><?php
-					printf( __( 'Tag Archives: %s', 'twentyten' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-				?></h1>
+                <header>
+    				<h1 class="page-title"><?php
+    					printf( __( 'Tag Archives: %s', 'twentyten' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+    				?></h1>
+                </header>
 
 <?php
 /* Run the loop for the tag archive to output the posts

@@ -30,7 +30,10 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<article id="post-0" class="post error404 not-found">
-		<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
+		<header>
+			<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
+		</header>
+
 		<div class="entry-content">
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
 			<?php get_search_form(); ?>
@@ -59,11 +62,13 @@
 
 	<?php if ( in_category( _x('gallery', 'gallery category slug', 'twentyten') ) ) : ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<header>
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
-			<div class="entry-meta">
-				<?php twentyten_posted_on(); ?>
-			</div><!-- .entry-meta -->
+				<p class="entry-meta">
+					<?php twentyten_posted_on(); ?>
+				</p><!-- .entry-meta -->
+			</header>
 
 			<div class="entry-content">
 <?php if ( post_password_required() ) : ?>
@@ -87,12 +92,12 @@
 <?php endif; ?>
 			</div><!-- .entry-content -->
 
-			<div class="entry-utility">
+			<footer class="entry-utility">
 				<a href="<?php echo get_term_link( _x('gallery', 'gallery category slug', 'twentyten'), 'category' ); ?>" title="<?php esc_attr_e( 'View posts in the Gallery category', 'twentyten' ); ?>"><?php _e( 'More Galleries', 'twentyten' ); ?></a>
 				<span class="meta-sep">|</span>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</div><!-- .entry-utility -->
+			</footer><!-- .entry-utility -->
 		</article><!-- #post-## -->
 
 <?php /* How to display posts in the asides category */ ?>
@@ -110,23 +115,25 @@
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
-			<div class="entry-utility">
+			<footer class="entry-utility">
 				<?php twentyten_posted_on(); ?>
 				<span class="meta-sep">|</span>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</div><!-- .entry-utility -->
+			</footer><!-- .entry-utility -->
 		</article><!-- #post-## -->
 
 <?php /* How to display all other posts. */ ?>
 
 	<?php else : ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<header>
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
-			<div class="entry-meta">
-				<?php twentyten_posted_on(); ?>
-			</div><!-- .entry-meta -->
+				<p class="entry-meta">
+					<?php twentyten_posted_on(); ?>
+				</p><!-- .entry-meta -->
+			</header>
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<div class="entry-summary">
@@ -139,7 +146,7 @@
 			</div><!-- .entry-content -->
 	<?php endif; ?>
 
-			<div class="entry-utility">
+			<footer class="entry-utility">
 				<?php if ( count( get_the_category() ) ) : ?>
 					<span class="cat-links">
 						<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
@@ -157,7 +164,7 @@
 				<?php endif; ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</div><!-- .entry-utility -->
+			</footer><!-- .entry-utility -->
 		</article><!-- #post-## -->
 
 		<?php comments_template( '', true ); ?>
