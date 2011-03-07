@@ -19,7 +19,7 @@ header,nav,section,article,aside,figure,footer { display:block; }
 
 /* Where we're reassigning div's to HTML5 elements we */
 /* need to copy across their CSS styles like so... */
-header { padding:30px 0 0; }
+.header { padding:30px 0 0; }
 footer { margin-bottom:20px; clear:both; width:100%; }
 
 h2#site-description { font-size: 12px;}
@@ -41,6 +41,7 @@ nav li:hover > a,nav ul ul :hover > a { background:#333; color:#fff; }
 nav ul li:hover > ul { display:block; }
 nav ul li.current_page_item > a,nav ul li.current-menu-ancestor > a,nav ul li.current-menu-item > a,nav ul li.current-menu-parent > a { color:#fff; }
 
+#content header p.entry-meta { margin-bottom: 0px; }
 
 input[type="email"], 
 input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); padding: 2px; }

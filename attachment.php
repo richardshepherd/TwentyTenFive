@@ -25,7 +25,7 @@ get_header(); ?>
 					<header>
 						<h2 class="entry-title"><?php the_title(); ?></h2>
 
-						<o class="entry-meta">
+						<p class="entry-meta">
 							<?php
 								printf(__('<span class="%1$s">By</span> %2$s', 'twentyten'),
 									'meta-prep meta-prep-author',

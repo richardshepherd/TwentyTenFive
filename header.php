@@ -62,7 +62,7 @@
 <![endif]-->
 
 <div id="wrapper" class="hfeed">
-	<header>
+	<header class="header">
 		<section id="masthead">
 			<div id="branding" role="banner">
 				<hgroup>
