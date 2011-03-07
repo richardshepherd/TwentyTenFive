@@ -545,8 +545,9 @@ function twentyten_img_caption_shortcode($attr, $content = null) {
 
 
 if ( $id ) $idtag = 'id="' . esc_attr($id) . '" ';
+$align = 'class="' . esc_attr($align) . '" ';
 
-  return '<figure ' . $idtag . 'aria-describedby="figcaption_' . $id . '" style="width: ' . (10 + (int) $width) . 'px">' 
+  return '<figure ' . $idtag . $align . 'aria-describedby="figcaption_' . $id . '" style="width: ' . (10 + (int) $width) . 'px">' 
   . do_shortcode( $content ) . '<figcaption id="figcaption_' . $id . '">' . $caption . '</figcaption></figure>';
 }
 
