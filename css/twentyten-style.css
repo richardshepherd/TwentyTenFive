@@ -1199,7 +1199,7 @@ h3#reply-title {
 	position: relative;
 }
 #site-generator a {
-	background: url(images/wordpress.png) center left no-repeat;
+	background: url(../images/wordpress.png) center left no-repeat;
 	color: #666;
 	display: inline-block;
 	line-height: 16px;
